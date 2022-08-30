@@ -1,0 +1,162 @@
+:root {
+    --primary-color: #D70F64;
+    --gray: rgba(128,128,128,0.208);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*1rem==16px, relative unit (also like responsive unit), useful becuz easierto manage*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.4rem;
+
+}
+
+nav>.logo {
+    padding: 1rem 0;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+nav>.logo>svg {
+    margin-right: 0.3rem;
+    display: none;
+}
+
+nav>svg {
+    cursor: pointer;
+}
+
+nav.active {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+}
+
+nav .login-btn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 1.4rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-right: 1px solid var(--gray);
+    border-left: 1px solid var(--gray);
+}
+
+.login-btn span{
+    margin-left:0.5rem;
+    font-weight: 600;
+
+}
+
+
+/*Hero Section*/
+section.hero{
+    padding: 0 1rem;
+    height: 500px;
+    border: 1px solid transparent;
+    position: relative;
+    
+}
+
+.hero .bg-wrapper{
+    position: absolute;
+    width: 33%;
+    margin-left: 67%;
+    background: url('./image/hero-section.png');
+    background-size: cover;
+    height: 100%;
+    /*z-index priorities css*/
+    z-index: -1;
+    float: right;
+    max-height: 335px;
+}
+
+.hero>h3{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 9rem;
+    min-width: 200px;
+    width: 70%;
+}
+.hero .actions{
+    margin-top: 4rem;
+}
+
+.actions .input-container{
+    position: relative;
+}
+
+.actions input{
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 10px ;
+    outline: none;
+    border: 1px solid #dcdcdc;
+    color:#333;
+    font-size: 0.9rem;
+    box-shadow: 0 0.3rem 2rem rgb(0 0 0/10%);
+}
+
+.actions input::placeholder{
+    color:darkgray;
+}
+
+.input-container svg{
+    position: absolute;
+    top:20px;
+    right: 20px;
+}
+
+.actions .buttons-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:1rem;
+}
+.buttons-container button{
+    background-color: var(--primary-color);
+    color:white;
+    border: none;
+    padding: 0 5rem;
+    height: 64px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+    nav>.logo>svg {
+        display: inline;
+    }
+
+}
+
+@media screen and (min-width:960px) {
+    nav>.profile-icon-medium {
+        display: none;
+    }
+
+    nav .login-btn {
+        display: inline-flex;
+
+    }
+
+}
