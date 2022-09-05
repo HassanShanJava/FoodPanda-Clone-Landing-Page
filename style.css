@@ -1,162 +1,276 @@
 :root {
-    --primary-color: #D70F64;
-    --gray: rgba(128,128,128,0.208);
+  --primary-color: #d70f64;
+  --gray: rgba(128, 128, 128, 0.208);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 /*1rem==16px, relative unit (also like responsive unit), useful becuz easierto manage*/
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.4rem;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.4rem;
 }
 
-nav>.logo {
-    padding: 1rem 0;
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+nav > .logo {
+  padding: 1rem 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
-nav>.logo>svg {
-    margin-right: 0.3rem;
-    display: none;
+nav > .logo > svg {
+  margin-right: 0.3rem;
+  display: none;
 }
 
-nav>svg {
-    cursor: pointer;
+nav > svg {
+  cursor: pointer;
 }
 
 nav.active {
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
 }
 
 nav .login-btn {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    border: none;
-    background-color: transparent;
-    padding: 1.4rem;
-    margin-right: 1rem;
-    cursor: pointer;
-    border-right: 1px solid var(--gray);
-    border-left: 1px solid var(--gray);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 1.4rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  border-right: 1px solid var(--gray);
+  border-left: 1px solid var(--gray);
 }
 
-.login-btn span{
-    margin-left:0.5rem;
-    font-weight: 600;
-
+.max-w-xl {
+  max-width: 1300px;
+  margin: auto;
 }
 
+.login-btn span {
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
 
 /*Hero Section*/
-section.hero{
-    padding: 0 1rem;
-    height: 500px;
-    border: 1px solid transparent;
-    position: relative;
-    
+section.hero {
+  padding: 0 1rem;
+  height: 500px;
+  border: 1px solid transparent;
+  position: relative;
 }
 
-.hero .bg-wrapper{
-    position: absolute;
-    width: 33%;
-    margin-left: 67%;
-    background: url('./image/hero-section.png');
-    background-size: cover;
-    height: 100%;
-    /*z-index priorities css*/
-    z-index: -1;
-    float: right;
-    max-height: 335px;
+.hero .bg-wrapper {
+  position: absolute;
+  width: 33%;
+  margin-left: 67%;
+  background: url("./image/hero-bg-xl.png");
+  background-size: cover;
+  height: 100%;
+  /*z-index priorities css*/
+  z-index: -1;
+  float: right;
+  max-height: 335px;
 }
 
-.hero>h3{
-    font-size: 2rem;
-    font-weight: 300;
-    margin-top: 9rem;
-    min-width: 200px;
-    width: 70%;
+.hero h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 9rem;
+  min-width: 200px;
+  width: 70%;
 }
-.hero .actions{
-    margin-top: 4rem;
-}
-
-.actions .input-container{
-    position: relative;
+.hero .actions {
+  margin-top: 4rem;
 }
 
-.actions input{
-    width: 100%;
-    padding: 1.5rem 1rem;
-    border-radius: 10px ;
-    outline: none;
-    border: 1px solid #dcdcdc;
-    color:#333;
-    font-size: 0.9rem;
-    box-shadow: 0 0.3rem 2rem rgb(0 0 0/10%);
+.actions .input-container {
+  position: relative;
 }
 
-.actions input::placeholder{
-    color:darkgray;
+.actions input {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #dcdcdc;
+  color: #333;
+  font-size: 0.9rem;
+  box-shadow: 0 0.3rem 2rem rgb(0 0 0/10%);
 }
 
-.input-container svg{
-    position: absolute;
-    top:20px;
-    right: 20px;
+.actions input::placeholder {
+  color: darkgray;
 }
 
-.actions .buttons-container{
+.input-container svg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.actions button {
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  padding: 0 5rem;
+  height: 64px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  nav > .logo > svg {
+    display: inline;
+  }
+
+  section.hero {
+    padding: 0 2rem;
+  }
+
+  .hero .bg-wrapper {
+    max-height: 900px;
+  }
+
+  .hero .actions {
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
-    justify-content: space-around;
+    padding: 1rem;
+    max-width: 960px;
+  }
+
+  .actions .input-container {
+    width: 80%;
+  }
+
+  .actions button {
+    width: 15%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top:1rem;
-}
-.buttons-container button{
-    background-color: var(--primary-color);
-    color:white;
-    border: none;
-    padding: 0 5rem;
-    height: 64px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 300;
-    cursor: pointer;
+    margin-left: 1rem;
+  }
+
+  .actions input {
+    box-shadow: none;
+  }
 }
 
-@media screen and (min-width:768px) {
-    nav>.logo>svg {
-        display: inline;
-    }
+@media screen and (min-width: 960px) {
+  nav > .profile-icon-medium {
+    display: none;
+  }
+
+  nav .login-btn {
+    display: inline-flex;
+  }
+
+  .hero .bg-wrapper {
+    max-height: 400px;
+  }
+}
+
+/* Parterner sec */
+.partners {
+  margin: 4rem 0;
+  position: relative;
+}
+
+.partners .backdrop-text {
+  padding: 0 2rem;
+  font-size: 4.5rem;
+  color: rgba(188,186,186,0.12);
+  font-weight: 900;
+  position: absolute;
+  top: -40px;
+  left: -10px;
+  z-index: -1;
+}
+
+.partners .caption {
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.partners .background-image {
+  background: url('./image/partner-bg.png');
+  min-height: 280px;
+  background-size: cover;
+  height: 100%;
 
 }
 
-@media screen and (min-width:960px) {
-    nav>.profile-icon-medium {
-        display: none;
-    }
+.partners .content{
+  box-shadow: 0 2px 28px 0 rgb(0 0 0/12%);
+  background-color: white;
+  margin: 0 1rem;
+  padding: 1rem;
+  margin-top:-4rem;
+  
+}
 
-    nav .login-btn {
-        display: inline-flex;
+.content p{
+  font-size: 0.9rem;
+  color: rgb(176,174,174)
+}
 
-    }
+.content .header-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: rgb(18,17,17);
+}
+.content button {
 
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  padding: 0 5rem;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+/* End Partners  */
+
+@media screen and (min-width: 1264px) {
+  .hero .bg-wrapper {
+    max-height: 500px;
+  }
+
+  .hero h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero .bg-wrapper {
+    max-height: 550px;
+  }
 }
