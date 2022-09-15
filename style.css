@@ -205,6 +205,61 @@ section.hero {
 
 /* End Partners  */
 
+/* cities */
+.cities{
+  margin-top:8rem;
+}
+
+.cities .container{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  /* this means when u make it small it wont go out of its place */
+  flex-wrap: nowrap;
+  padding: 1rem;
+
+  /* scroll bar in x dirction */
+  overflow-x: scroll;
+
+}
+
+.container .card{
+  height: 272px;
+  min-width: 230px;
+  max-width: 230px;
+  position: relative;
+
+  /* so zoom effect wont come out of the card when  scaling the img */
+  overflow: hidden;
+
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 1rem;
+
+}
+
+.container img{
+  width:100%;
+  height: 100%;
+  transform: scale(1.1);
+}
+
+.container p{
+  position: absolute;
+  bottom:10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  left:30px;
+}
+
+.container img:hover{
+  transform:scale(1.2);
+  transition: all 0.3s ease;
+}
+/* end cities */
+
 @media screen and (min-width: 768px) {
   nav > .logo > svg {
     display: inline;
@@ -294,6 +349,16 @@ section.hero {
   }
 
   /* end partner */
+
+  /* cities */
+
+  .cities .container{
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-evenly;
+  }
+
+  /* end cities */
 }
 
 @media screen and (min-width: 1264px) {
