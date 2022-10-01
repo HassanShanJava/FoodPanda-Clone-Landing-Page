@@ -449,7 +449,7 @@ section.hero {
   }
 
   .image-container img{
-    min-width: 500px;
+    min-width: 500px !important;
 
   }
 
@@ -501,7 +501,8 @@ section.hero {
   }
 
   .image-container img{
-    min-width: 600px;
+    min-width: 600px !important;
+    
   }
 
 
