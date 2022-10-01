@@ -82,7 +82,7 @@ section.hero {
   position: absolute;
   width: 33%;
   margin-left: 67%;
-  background: url("./image/hero-bg-xl.png");
+  background: url("./image/Hero-bg-xl.png");
   background-size: cover;
   height: 100%;
   /*z-index priorities css*/
@@ -164,7 +164,7 @@ section.hero {
 }
 
 .partners .background-image {
-  background: url("./image/partner-bg.png");
+  background: url("./image/Partner-bg.png");
   min-height: 280px;
   background-size: cover;
   background-position: center;
