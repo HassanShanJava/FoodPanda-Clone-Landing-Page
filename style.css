@@ -364,6 +364,85 @@ section.hero {
   }
   /* Office end */
 
+
+
+
+  /* FAQ Section */
+
+
+  .FAQ{
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+
+
+  }
+
+  .FAQ .heading{
+    font-size:2rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    line-height: 2.1rem;
+  }
+
+  .FAQ .text{
+    margin-top: 1.5rem;
+    font-weight: lighter;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .FAQ .text>a{
+    text-decoration: none;
+    color: var(--primary-color);
+
+  }
+
+  .FAQ .list{
+    list-style-type: none;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .FAQ .list>li{
+    width: 100%;
+    font-weight: lighter;
+    line-height: 1.8rem;
+
+  }
+
+  .FAQ li >span{
+    color: var(--primary-color);
+
+  }
+
+  .FAQ .divider{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.201);
+    margin-top: 1.5rem;
+  }
+
+
+  .FAQ .sub-heading{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
+
+  .FAQ .bold-text{
+    margin-top: 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .FAQ .indented{
+    padding-left: 2rem;
+
+  }
+
+
+  /* FAQ End */
 /* Media Queries */
 @media screen and (min-width: 768px) {
   nav > .logo > svg {
@@ -533,6 +612,7 @@ section.hero {
   }
   /* end app */
 }
+
 
 @media screen and (min-width: 1264px) {
   .hero .bg-wrapper {
